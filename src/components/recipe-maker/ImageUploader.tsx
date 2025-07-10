@@ -26,7 +26,7 @@ export default function ImageUploader({ setImage }: { setImage: (file: File | nu
     setImage(null);
     setPreview(null);
     if (fileInputRef.current) {
-      fileInputRef.current.value = ''; // nullstill input
+      fileInputRef.current.value = '';
     }
   };
 
@@ -34,7 +34,6 @@ export default function ImageUploader({ setImage }: { setImage: (file: File | nu
     <div>
       <h2 className="text-lg font-semibold mb-2">Last opp bilde</h2>
 
-      {/* Skjult input */}
       <input
         ref={fileInputRef}
         type="file"
