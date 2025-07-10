@@ -6,12 +6,14 @@ export default function PreviewModal({
   ingredientGroups,
   instructions,
   image,
+  recipeTitle,
 }: {
   isOpen: boolean;
   onClose: () => void;
   ingredientGroups: IngredientGroup[];
   instructions: string;
   image: File | null;
+  recipeTitle: string;
 }) {
   if (!isOpen) return null;
 
@@ -22,9 +24,10 @@ export default function PreviewModal({
           ✖
         </button>
 
-        <h2 className="text-xl font-bold mb-4">📄 Forhåndsvisning</h2>
+        <h2 className="text-xl font-bold mb-4">Forhåndsvisning</h2>
 
         <div>
+          <h2 className="text-2xl font-bold mb-4">{recipeTitle || 'Uten navn'}</h2>
           <h3 className="text-lg font-semibold">Ingredienser</h3>
           <ul className="list-disc pl-5 mb-4">
             {ingredientGroups.map((group, groupIndex) => (
