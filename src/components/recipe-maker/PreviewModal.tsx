@@ -1,15 +1,15 @@
-import { Ingredient } from './IngredientsInput';
+import { IngredientGroup } from './IngredientsInput';
 
 export default function PreviewModal({
   isOpen,
   onClose,
-  ingredients,
+  ingredientGroups,
   instructions,
   image,
 }: {
   isOpen: boolean;
   onClose: () => void;
-  ingredients: Ingredient[];
+  ingredientGroups: IngredientGroup[];
   instructions: string;
   image: File | null;
 }) {
@@ -27,10 +27,17 @@ export default function PreviewModal({
         <div>
           <h3 className="text-lg font-semibold">Ingredienser</h3>
           <ul className="list-disc pl-5 mb-4">
-            {ingredients.map((ing, index) => (
-              <li key={index}>
-                {ing.quantity} {ing.unit} {ing.item}
-              </li>
+            {ingredientGroups.map((group, groupIndex) => (
+              <div key={groupIndex} className="mb-4">
+                {group.title && <h4 className="text-md font-semibold mb-1">{group.title}</h4>}
+                <ul className="list-disc pl-5">
+                  {group.ingredients.map((ing, ingIndex) => (
+                    <li key={ingIndex}>
+                      {ing.quantity} {ing.unit} {ing.item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
           </ul>
 
