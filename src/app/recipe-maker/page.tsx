@@ -17,7 +17,7 @@ export default function RecipeMaker() {
   const [recipeTitle, setRecipeTitle] = useState('');
 
   return (
-    <div className="max-w-3xl mx-auto p-4">
+    <div className="max-w-3xl mx-auto p-8 border-2 rounded border-gray-100 flex flex-col">
       <h1 className="text-2xl font-bold mb-4">Lag din egen oppskrift</h1>
 
       <RecipeTitleInput recipeTitle={recipeTitle} setRecipeTitle={setRecipeTitle} />
@@ -31,7 +31,10 @@ export default function RecipeMaker() {
 
       <ImageUploader setImage={setImage} />
 
-      <button onClick={() => setShowPreview(true)} className="mt-4 bg-green-200 px-4 py-2 rounded">
+      <button
+        onClick={() => setShowPreview(true)}
+        className="mt-4 bg-green-200 px-4 py-2 rounded max-w-fit self-end"
+      >
         Forhåndsvisning
       </button>
 

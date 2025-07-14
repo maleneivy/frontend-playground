@@ -13,7 +13,7 @@ export default function RecipeTitleInput({
         value={recipeTitle}
         onChange={(e) => setRecipeTitle(e.target.value)}
         placeholder="f.eks. Bestemors kjøttkakemiddag"
-        className="border px-2 py-1 w-full"
+        className="border border-gray-300 rounded p-2 w-full"
       />
     </div>
   );

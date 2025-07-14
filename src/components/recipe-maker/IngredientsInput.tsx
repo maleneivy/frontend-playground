@@ -122,7 +122,7 @@ export default function IngredientsInput({
       <h2 className="text-lg font-semibold mb-2">Ingredienser</h2>
 
       {ingredientGroups.map((group, groupIndex) => (
-        <div key={groupIndex} className="mb-6 border p-3 pt-8 rounded relative">
+        <div key={groupIndex} className="mb-6 relative">
           {ingredientGroups.length > 1 || !isGroupEmpty(groupIndex) ? (
             <button
               onClick={() => removeGroup(groupIndex)}
@@ -139,7 +139,7 @@ export default function IngredientsInput({
             value={group.title}
             onChange={(e) => handleGroupTitleChange(groupIndex, e.target.value)}
             placeholder="Overskrift (f.eks. Kjøttkaker)"
-            className="border px-2 py-1 mb-2 w-full"
+            className="border border-gray-300 rounded p-2 mb-2 w-full"
           />
 
           {group.ingredients.map((ing, ingredientIndex) => (
@@ -156,7 +156,7 @@ export default function IngredientsInput({
                   )
                 }
                 placeholder="Antall"
-                className="border px-2 py-1 w-20"
+                className="border border-gray-300 rounded p-2 w-20"
               />
               <input
                 type="text"
@@ -165,7 +165,7 @@ export default function IngredientsInput({
                   handleIngredientChange(groupIndex, ingredientIndex, 'unit', e.target.value)
                 }
                 placeholder="Enhet"
-                className="border px-2 py-1 w-24"
+                className="border border-gray-300 rounded p-2 w-24"
               />
               <input
                 type="text"
@@ -174,7 +174,7 @@ export default function IngredientsInput({
                   handleIngredientChange(groupIndex, ingredientIndex, 'item', e.target.value)
                 }
                 placeholder="Råvare"
-                className="border px-2 py-1 flex-1"
+                className="border border-gray-300 rounded p-2 flex-1"
               />
               <button
                 onClick={() => removeIngredient(groupIndex, ingredientIndex)}
