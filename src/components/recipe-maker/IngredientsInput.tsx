@@ -143,7 +143,7 @@ export default function IngredientsInput({
           />
 
           {group.ingredients.map((ing, ingredientIndex) => (
-            <div key={ingredientIndex} className="flex gap-2 mb-2">
+            <div key={ingredientIndex} className="flex flex-wrap gap-2 mb-2">
               <input
                 type="number"
                 value={ing.quantity || ''}

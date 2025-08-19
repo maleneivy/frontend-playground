@@ -20,7 +20,7 @@ export default function RecipeMaker() {
   const [recipeTitle, setRecipeTitle] = useState('');
 
   return (
-    <div className="relative">
+    <div className="relative min-h-screen pt-8 px-4 ">
       <div
         className="absolute inset-0 bg-cover bg-center opacity-30"
         style={{ backgroundImage: "url('/images/recipe-maker/bg-recipe.jpg')" }}
