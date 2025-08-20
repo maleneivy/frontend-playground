@@ -10,6 +10,9 @@ import {
 import MonsterPreview from './MonsterPreview';
 import { DndContext, closestCenter } from '@dnd-kit/core';
 import { useDroppable, useDraggable } from '@dnd-kit/core';
+import { Lacquer } from 'next/font/google';
+
+const lacquer = Lacquer({ subsets: ['latin'], weight: ['400'] });
 
 const defaultConfig: MonsterConfig = {
   body: 'round',
@@ -63,10 +66,6 @@ export default function MonsterBuilder() {
   const [config, setConfig] = useState<MonsterConfig>(defaultConfig);
   const [colors, setColors] = useState<MonsterColors>(defaultColors);
 
-  const handleChange = (part: MonsterPartKey, value: string) => {
-    setConfig((prev) => ({ ...prev, [part]: value }));
-  };
-
   const handleColorChange = (part: MonsterPartKey, color: string) => {
     setColors((prev) => ({ ...prev, [part]: color }));
   };
@@ -83,7 +82,9 @@ export default function MonsterBuilder() {
 
   return (
     <div className="flex flex-col gap-6">
-      <h2 className="text-xl font-semibold">Bygg ditt monster</h2>
+      <h1 className={`${lacquer.className} text-4xl text-center font-semibold`}>
+        Bygg ditt monster
+      </h1>
 
       <DndContext collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
         <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4 p-4 sm:p-6">
