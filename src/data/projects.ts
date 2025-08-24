@@ -10,4 +10,10 @@ export const projects = [
     description:
       'Sett sammen et monster med valgbare kroppsdeler, farger og stil – og se resultatet i sanntid.',
   },
+  {
+    title: 'Min planteguide',
+    path: '/my-plantguide',
+    description:
+      'Få veiledning i hvordan du skal ta vare på plantene dine ved å legge til plante og dens forhold.',
+  },
 ];
