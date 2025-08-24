@@ -81,7 +81,7 @@ export default function MonsterBuilder() {
   };
 
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-6 max-w-296 mx-auto mt-4">
       <h1 className={`${lacquer.className} text-4xl text-center font-semibold`}>
         Bygg ditt monster
       </h1>

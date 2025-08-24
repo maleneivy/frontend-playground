@@ -8,7 +8,7 @@ export default function MonsterPreview({
   colors: MonsterColors;
 }) {
   return (
-    <div className="mt-6 border p-4 rounded bg-white shadow w-fit">
+    <div className="mt-6 border p-4 rounded bg-white shadow w-fit mx-auto">
       <svg width="200" height="200" viewBox="0 0 200 200">
         {/* Body */}
         {config.body === 'round' && <circle cx="100" cy="100" r="50" fill={colors.body} />}
