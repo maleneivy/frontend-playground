@@ -5,13 +5,17 @@ import { PlantInput } from '@/data/my-plantguide/plantData';
 import { useState } from 'react';
 
 export default function MyPlantGuide() {
-  const [input, setInput] = useState<PlantInput | null>(null);
+  const [plantData, setPlantData] = useState<PlantInput | null>(null);
+
+  const handleFormSubmit = (data: PlantInput) => {
+    setPlantData(data);
+  };
 
   return (
     <>
       <h1>Min plante-guide</h1>
-      <PlantForm onSubmit={setInput} />
-      {input && <PlantResult input={input} />}
+      <PlantForm onSubmit={handleFormSubmit} />
+      {plantData && <PlantResult input={plantData} />}
     </>
   );
 }
