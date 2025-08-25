@@ -6,16 +6,17 @@ export function generateSukkulentGuide(input: PlantInput): string {
   let result = `Stell av Sukkulent\n\n`;
 
   if (light === 'sol') {
-    result += 'Sukkulenter elsker sol og tørre omgivelser. Flott plassering!\n';
+    result += 'Sukkulenter elsker sol og tørre omgivelser. Flott plassering i sollys!\n';
   } else {
     result += 'Sukkulenter trenger mye lys. Sett den så nær et vindu som mulig.\n';
   }
 
   if (water === 'ofte') {
     result +=
-      'Sukkulenter trenger sjelden vann – for mye vann kan føre til rotråte. La jorden tørke helt opp.\n';
+      'Sukkulenter trenger sjelden vann, for mye vann kan føre til rotråte. La jorden tørke helt opp.\n';
   } else if (water === 'av og til') {
-    result += 'Det passer fint! Bare husk å ikke vanne før jorden er helt tørr.\n';
+    result +=
+      'Det passer fint å vanne av og til! Bare husk å ikke vanne før jorden er helt tørr.\n';
   } else {
     result += 'Sukkulenter trives godt med lite vann. Dette er perfekt for planten.\n';
   }
@@ -27,7 +28,7 @@ export function generateSukkulentGuide(input: PlantInput): string {
     result += 'Tørr luft er perfekt for sukkulenter.\n';
   }
 
-  if (forgetFulness === 'ofte') {
+  if (forgetFulness === 'veldig') {
     result += 'Sukkulenter er supre for glemsomme planteeiere, de tåler tørke godt!\n';
   }
 

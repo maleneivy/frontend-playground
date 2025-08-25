@@ -17,7 +17,7 @@ export function generateOrkideGuide(input: PlantInput): string {
     result +=
       'Pass på at røttene ikke står i vann, orkidéer liker å tørke litt opp mellom vanning.\n';
   } else if (water === 'av og til') {
-    result += 'Det passer perfekt for de fleste orkidéer!\n';
+    result += 'Det passer perfekt å vanne av og til for de fleste orkidéer!\n';
   } else {
     result +=
       'For lite vann kan føre til tørre røtter og visne blomster. Vurder å vanne litt oftere.\n';
@@ -30,7 +30,7 @@ export function generateOrkideGuide(input: PlantInput): string {
       'Lav luftfuktighet kan være utfordrende. Dusj bladene forsiktig eller bruk luftfukter.\n';
   }
 
-  if (forgetFulness === 'ofte') {
+  if (forgetFulness === 'veldig') {
     result += 'Orkidéer trenger litt kjærlighet og jevnlig stell. Sett en påminnelse på mobilen!\n';
   }
 

@@ -6,7 +6,7 @@ export type PlantFactors = {
   light: 'sol' | 'delvis' | 'skygge';
   water: 'ofte' | 'av og til' | 'sjelden';
   humidity: 'høy' | 'normal' | 'lav';
-  forgetFulness: 'aldri' | 'noen ganger' | 'ofte';
+  forgetFulness: 'husker godt' | 'litt' | 'veldig';
 };
 
 export type PlantInput = {
