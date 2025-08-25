@@ -1,9 +1,14 @@
+import { Inter } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
 
+const inter = Inter({ subsets: ['latin'], weight: ['400'] });
+
 export default function Header() {
   return (
-    <header className="w-full px-4 py-3 shadow-md flex items-center justify-between bg-green-100">
+    <header
+      className={`${inter.className} w-full px-4 py-3 shadow-md flex items-center justify-between bg-green-100`}
+    >
       <div className="flex items-center">
         <Image src="/frontend-playground.png" alt="Logo" width={50} height={50} />
       </div>
